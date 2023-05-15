@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Youn의 포트폴리오</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap" rel="stylesheet">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- slick -->
+  <script type="text/javascript">
+    //window.onload = function () {
+    $(document).ready(
+      function () {
+        /*
+                    var elm = ".box";
+                    $(elm).each(function (index) {
+                        // 개별적으로 Wheel 이벤트 적용
+                        $(this).on("mousewheel DOMMouseScroll", function (e) {
+                            e.preventDefault();
+                            var delta = 0;
+                            if (!event) event = window.event;
+                            if (event.wheelDelta) {
+                                delta = event.wheelDelta / 120;
+                                if (window.opera) delta = -delta;
+                            }
+                            else if (event.detail)
+                                delta = -event.detail / 3;
+                            var moveTop = $(window).scrollTop();
+                            var elmSelecter = $(elm).eq(index);
+                            // 마우스휠을 위에서 아래로
+                            if (delta < 0) {
+                                if ($(elmSelecter).next() != undefined) {
+                                    try{
+                                        moveTop = $(elmSelecter).next().offset().top;
+                                    }catch(e){}
+                                }
+                            // 마우스휠을 아래에서 위로
+                            } else {
+                                if ($(elmSelecter).prev() != undefined) {
+                                    try{
+                                        moveTop = $(elmSelecter).prev().offset().top;
+                                    }catch(e){}
+                                }
+                            }
+                            // 화면 이동 0.8초(800)
+                            $("html,body").stop().animate({
+                                scrollTop: moveTop + 'px'
+                            }, {
+                                duration: 800, complete: function () {
+                                }
+                            });
+                        });
+                    });
+        */
+        //한글,영문 메뉴병 변경
+        var ko = ["소개", "포트폴리오", "문의"];
+        var eng = ["profile", "portfolio", "contact"];
+
+        var n = 0;
+        var lang;
+        $(".lang button").click(
+          function () {
+            lang = $(this).attr("data-lang");
+            console.log(lang);
+            if (lang == "k") {
+              n = 0;
+              $("header ul.menu li").each(
+                function () {
+                  $(this).children("a").text(ko[n]);
+                  console.log(n);
+                  n++;
+                }
+              );
+            }
+            else {
+              n = 0;
+              $("header ul.menu li").each(
+                function () {
+                  $(this).children("a").text(eng[n]);
+                  n++;
+                }
+              );
+            }
+
+
+          }
+        );
+
+        // 로고 애니메이
+        $("header h1 a span").delay(2000).each(
+          function () {
+            //$(this).delay(5000).css("transform","rotate(12deg)");
+            // $(this).delay(5000).addClass("rot12");
+          }
+        );
+
+        //제이쿼리로 좌측고정메뉴마크업추가하기
+        $("header div h1").after("<ul class='slide'><li><a href='#' data-y='1'>profile</a></li><li><a href='#' data-y='2'>portfolio</a></li><li><a href='#' data-y='3'>contact</a></li></ul>");
+        var menuH = $("header ul.menu").offset().top + $("header ul.menu").height();
+        var titleH = $("#title hgroup").offset().top - 45;
+        var profileH = $(".box h2").offset().top - 35;
+        var portfolioH = $("#portfolio").offset().top - 45;
+        var contactH = $("#contact").offset().top - 45;
+        var contactL = $(".portfolioin").offset().top - 45;
+        var slideH = $("hearder div ul.slide").css("top")
+        slideH = parseInt(slideH, 10)
+        console.log("1" + contactH);
+        // 스크롤하면 좌측메뉴가 등장
+        $("header div ul.slide").addClass("slidingmenuBack");
+        $(window).scroll(
+          function () {
+            if ($(window).scrollTop() > menuH) {
+              $("header div ul.slide").addClass("slidingmenu");
+            }
+            if ($(window).scrollTop() < menuH) {
+              $("header div ul.slide").removeClass("slidingmenu");
+            }
+            if ($(window).scrollTop() > profileH - $("header div ul.slide").offset().top) {
+              $("ul.slide li:nth-child(1) a").addClass("current");
+              $("ul.slide li").not(":nth-child(1)").children("a").removeClass("current");
+            }
+            // if($(window).scrollTop()>titleH){
+            //   $("header div ul.slide").hide();
+            //   $("header div ul.slide").removeClass("slidingmenuBack");
+            //   $("header div ul.slide").show().addClass("slidingmenu");
+            // }
+            // if($(window).scrollTop()<profileH){
+            // $("header div ul.slide").addClass("slidingmenuBack");
+            // }
+            // if($(window).scrollTop()<profileH){
+            //   $("ul.slide li:nth-child(1) a").addClass("current");
+            //   $("ul.slide li").not(":nth-child(1)").children("a").removeClass("current");
+            // }
+            if ($(window).scrollTop() > portfolioH) {
+              $("ul.slide li:nth-child(2) a").addClass("current");
+              $("ul.slide li").not(":nth-child(2)").children("a").removeClass("current");
+            }
+            if ($(window).scrollTop() > contactL) {
+              $("ul.slide li:nth-child(3) a").addClass("current");
+              $("ul.slide li").not(":nth-child(3)").children("a").removeClass("current");
+            }
+            if ($(window).scrollTop() > portfolioH - slideH) {
+              $("ul.slide li:nth-child(2) a").addClass("current");
+              $("ul.slide li").not(":nth-child(2)").children("a").removeClass("current");
+            };
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > contactL) {
+              $("ul.slide li:nth-child(3) a").addClass("current");
+              $("ul.slide li").not(":nth-child(3)").children("a").removeClass("current");
+            };
+          }
+
+        );
+        // 데메뉴클릭시 페이지 슬라이딩
+        var y;
+        $(".menu li a,.slide li a").click(
+          function () {
+            y = $(this).attr("data-y");
+            // y = $(this).parent().index()+1;
+            if (y == 1) {
+              $("html,body").animate({ "scrollTop": profileH + 515 }, 1000);
+              return false;
+            };
+            if (y == 2) {
+              $("html,body").animate({ "scrollTop": portfolioH + 490 }, 1000);
+              return false;
+            };
+            if (y == 3) {
+              $("html,body").animate({ "scrollTop": contactH + 300 }, 1000);
+              return false;
+            };
+
+          }
+        );
+        //대메뉴오버시 한글띄우기
+        $(".menu li a,.slide li a").hover(
+          function () {
+            var text = $(this).attr("data-kor");
+            $(this).append('<span class="ko"></span>');
+            $(this).children('.ko').text(text);
+          },
+          function () {
+            $(this).children('.ko').remove();
+          }
+        );
+
+        //홈버튼 클릭시 상위로 이동
+        $("button.home").click(
+          function () {
+            $("html,body").animate({ "scrollTop": 0 }, 400);
+          }
+        );
+
+        //포트폴리오 slick
+        $('.center').slick({
+          centerMode: true,
+          dots: true,
+          autoplay: true,
+          centerPadding: '60px',
+          slidesToShow: 3,
+          responsive: [{
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }},
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+
+
+        //
+      }
+    );
+        //}
+  </script>
+  <script type="text/javascript" src="js/ani.js"> </script>
+  <link href="css/aos.css" rel="stylesheet">
+  <script src="js/aos.js"></script>
+
+  <!-- 라이트박스 -->
+  <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+  <script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+  <script src="js/jquery.smooth-scroll.min.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <script>
+    jQuery(document).ready(function ($) {
+      $('a').smoothScroll({
+        speed: 1000,
+        easing: 'easeInOutCubic'
+      });
+
+      $('.showOlderChanges').on('click', function (e) {
+        $('.changelog .old').slideDown('slow');
+        $(this).fadeOut();
+        e.preventDefault();
+      })
+    });
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2196019-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</head>
+
+<body>
+  <!-- 상단영역 -->
+  <header>
+    <div>
+      <h1>
+        <a href="">
+          <span>Na</span>
+          <span>Youn</span>
+          <span>Ser</span>
+        </a>
+      </h1>
+      <ul class="menu">
+        <li><a href="#" class="eng" data-y="1">profile</a></li>
+        <li><a href="#" class="eng" data-y="2">portfolio</a></li>
+        <li><a href="#" class="eng" data-y="3">Contact</a></li>
+
+
+      </ul>
+      <span class="lang">
+        <button data-lang="k">kor</button>
+        <button data-lang="e">eng</button>
+      </span>
+    </div>
+  </header>
+  <!-- 타이틀 영역 -->
+  <div id="title" class="box">
+    <hgroup>
+      <h2 class="kor">모든 문제의 답은 내 안에 있다.</h2>
+      <h3 class="eng">UI.UX DESIGNER YOUN</h3>
+    </hgroup>
+  </div>
+  <!-- 내용 영역 -->
+
+  <div id="profile" class="box">
+    <h2 class="eng">profile and skill</h2>
+    <div class="profilein" data-aos="fade-up">
+      <img data-aos="fade-left" src="img/me.png" alt="" class="left">
+      <div class="right" data-aos="fade-right">
+        <h3>Na Youn Ser</h3>
+        <ul>
+          <li><span>Male</span></li>
+          <li><span>SUWON,GYEONGGI-DO</span></li>
+        </ul>
+      </div>
+      <img class="hcj" src="img/hcj.png" alt="">
+    </div>
+  </div>
+
+  <div id="portfolio" class="box">
+    <h2 class="eng">portfolio</h2>
+    <div class="portfolioin">
+      <div class="web">
+        <h3>웹작품</h3>
+        <ul class="center">
+          <li>
+            <img src="img/make.png" alt="">
+            <div class="detail">
+              <h3>한진칼 카피</h3>
+              <p></p>
+              <a href="https://y0un0909.github.io/pf1/" target="_blank">자세히보기</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/youtube.png" alt="">
+            <div class="detail">
+              <h3>Youtube</h3>
+              <p></p>
+              <a href="https://www.youtube.com/channel/UCw1y4fMiz8PAMEYKLF8DHhQ" target="_blank">자세히보기</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/Screenshot.png" alt="">
+            <div class="detail">
+              <h3>자기소개서</h3>
+              <p></p>
+              <a href="https://youn090974.wixsite.com/youn0909" target="_blank">자세히보기</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/twich.png" alt="">
+            <div class="detail">
+              <h3>트위치</h3>
+              <p></p>
+              <a href="https://www.twitch.tv/y0un0909" target="_blank">자세히보기</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="contact" class="box">
+    <h2 class="eng">contact</h2>
+    <div class="down">
+      <h3>나윤서</h3>
+      <ul>
+        <li><span>사용가능한것</span></li>
+        <li class="colors"><span>프리미어프로,에프터이펙트,html,css,js</span></li>
+        <li><span>전화번호</span></li>
+        <li class="colors"><span>010-5630-1095</span></li>
+        <li><span>이메일</span></li>
+        <li class="colors"><span>y0un0909@naver.com</span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 하단 영역  -->
+  <footer>
+  </footer>
+  <button class="home" type="button">HOME</button>
+
+  <script type="text/javascript">
+    AOS.init();
+  </script>
+</body>
+
+</html>
