@@ -86,10 +86,10 @@
   #contact{
     
   background-position-x: -300px;
-  height: 760px;
+  height: 600px;
   }
   #contact .down{
   margin-top: 15%;
-  height: 600px;
+  height: 100%;
   }
 }
