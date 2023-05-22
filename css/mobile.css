@@ -1,0 +1,85 @@
+/* 태블릿 버전 */
+@media screen and (max-width:1200px){
+  header{
+    width: 100%;
+  }
+  #title{
+    
+    background-position-x: 50%;
+  }
+  #profile .profilein .right{
+    
+  width: 25%;
+  /*! margin-left: 0; */
+  /*! position: relative; */
+  }
+  #profile .profilein .hcj{
+    
+  width: 30%;
+  }
+  
+}
+
+/* 모바일 버전 */
+@media screen and (max-width:760px){
+  header{
+    width: 100%;
+  }
+  header::before{
+   content: "";
+  }
+  .slidingmenu{
+    
+  display: none;
+  }
+  header h1{
+    
+  top: 0px;
+  left: 0;
+  position: absolute;
+  }
+  #title{
+    
+  background-size: cover;
+  height: 750px;
+  background-position-x: 50%;
+  }
+  #profile .profilein{
+    
+  }
+  #profile .profilein .right{
+    
+  width: 24%;
+  margin-left: 0;
+  }
+  #profile .profilein .hcj{
+    
+  width: 30%;
+  }
+  #profile{
+    
+  height: 760px;
+  }
+  #portfolio{
+    
+  height: 800px;
+  background-position-y: -120px;
+  }
+  #portfolio::before{
+  display: none;
+  }
+  #portfolio .portfolioin{
+    
+  margin-top: 400px;
+  padding-bottom: 0;
+  }
+  #contact{
+    
+  background-position-x: -300px;
+  height: 760px;
+  }
+  #contact .down{
+    
+  margin-top: 15%;
+  }
+}
