@@ -52,7 +52,11 @@
         left: 0;
         position: absolute;
     }
-
+    header ul.menu{
+        font-size: 35px;
+    }
+    header span.lang button{
+    }
     #title {
 
         background-size: cover;
