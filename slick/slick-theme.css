@@ -40,6 +40,7 @@
     border: none;
     outline: none;
     background: transparent;
+    top: 300px;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -49,6 +50,9 @@
     color: transparent;
     outline: none;
     background: transparent;
+    background-image: url(../img/next-hover.svg);
+    width: 40px;
+    height: 40px;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -67,7 +71,7 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    /*! font-size: 20px; */
     line-height: 1;
 
     opacity: .75;
@@ -79,7 +83,21 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 40px;
+    z-index: 3;
+    background-image: url(../img/prev.svg);
+    width: 40px;
+    height: 40px;
+}
+.slick-prev:hover{
+    
+    color: transparent;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    background-image: url(../img/prev-hover.svg);
+    width: 40px;
+    height: 40px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -89,6 +107,7 @@
 .slick-prev:before
 {
     content: '←';
+    font-size: 0;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -97,7 +116,10 @@
 
 .slick-next
 {
-    right: -25px;
+    left: 100px;
+    background-image: url(../img/next.svg);
+    width: 40px;
+    height: 40px;
 }
 [dir='rtl'] .slick-next
 {
