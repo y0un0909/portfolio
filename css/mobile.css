@@ -3,20 +3,25 @@
     header {
         width: 100%;
     }
-    header ul li a{
-        
-    font-size: 45px;
+
+    header ul li a {
+
+        font-size: 45px;
     }
+
     #title {
         background-position-x: 50%;
         height: 100%;
     }
+
     #title hgroup h2 {
         font-size: 60px;
-    }  
-     #title hgroup h3{
+    }
+
+    #title hgroup h3 {
         font-size: 50px;
     }
+
     #profile {
 
         height: 750px;
@@ -38,16 +43,20 @@
 
         height: 750px;
     }
-    #contact .down h3{
-        
-    font-size: 50px;
+
+    #contact .down h3 {
+
+        font-size: 30px;
     }
-    #contact .down li span{
+    #contact .down li{
         
-    font-size: 40px;
-    line-height: 1.5;
     }
-    
+    #contact .down li span {
+
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
 }
 
 /* 모바일 버전 */
@@ -66,40 +75,47 @@
     }
 
     header h1 {
-
-        top: 0px;
+        top: -15px;
         left: 0;
         position: absolute;
     }
-    header ul.menu{
+
+    header ul.menu {margin-top: 2%;}
+
+    header ul.menu li {}
+
+    header ul li a.eng {
+
+        font-size: 30px;
     }
-    header ul.menu li{
-        
+
+    header span.lang {
+
+        height: 30px;
+        margin-top: 2%;
     }
-    header ul li a{
-        
-    font-size: 30px;
-    }
-    header span.lang{
-        
-    height: 30px;
-    /*! margin-top: 2%; */
-    }
-    header span.lang button{
-    }
+
+    header span.lang button {}
+
     #title {
 
         background-size: cover;
         height: 750px;
         background-position-x: 50%;
+        background-position-y: 50%;
     }
-
+    #title hgroup{
+        
+    transform: translateY(20%);
+    }
     #title hgroup h2 {
-        font-size: 60px;
-    }
-    #title hgroup h3{
         font-size: 50px;
     }
+
+    #title hgroup h3 {
+        font-size: 40px;
+    }
+
     #profile .profilein {}
 
     #profile .profilein .right {
@@ -137,11 +153,10 @@
     #contact {
 
         background-position-x: -300px;
-        height: 760px;
+        height: 79%;
     }
 
     #contact .down {
         margin-top: 15%;
-        height: 100%;
     }
 }

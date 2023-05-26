@@ -13,6 +13,7 @@ html,body{
   font-size: 40px;
   line-height: 3;
   text-transform: uppercase;
+  padding-top: 15px;
 }
 .box h2 span{
   
@@ -48,7 +49,7 @@ header h1{
   padding-left: 30px;
   overflow: hidden;
   padding: 15px;
-  top: 6%;
+  top: 30px;
 }
 header::before{
   content: "";
@@ -64,7 +65,8 @@ header::before{
 }
 header h1 a{
   display: block;
-  color: gray;
+  color: white;
+  font-size: 42px;
 }
 header h1 a span{
   display: inline-block;
@@ -170,14 +172,14 @@ header ul{
 header ul.menu{
   
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 header ul.menu li{
   /*! display: inline-block; */
 }
-header ul li a{
+header ul li a.eng{
   text-transform:uppercase;
-  font-size: 23px;
+  font-size: 30px;
   position: relative;
 }
 header ul li a .ko{
@@ -208,6 +210,9 @@ header span.lang button{
   text-transform: uppercase;
   margin: 0 1%;
   cursor: pointer;
+  background: transparent;
+  color: white;
+  border: none;
 }
 
 /*  타이틀  */
@@ -224,11 +229,12 @@ header span.lang button{
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: -169px;
 }
 #title hgroup{
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 216px;
+  transform: translateY(-20%);
 }
 #title hgroup h2{
   font-size: 40px;
@@ -336,7 +342,7 @@ body[data-aos-duration="400"] [data-aos] {
   width: 600px;
   height: 800px;
   display: block;
-  background-color: red;
+  background-color: #d4003b;
   transform: skewX(-45deg) translateX(-300px);
 }
 #portfolio .portfolioin{
@@ -372,6 +378,8 @@ body[data-aos-duration="400"] [data-aos] {
 }
 #portfolio .portfolioin .detail p{
  text-align: center; 
+ color: skyblue;
+ line-height: 3;
 }
 #portfolio .portfolioin .detail a{
   display: block;
