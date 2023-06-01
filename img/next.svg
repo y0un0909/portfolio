@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3C3B20C7-9ACA-45F5-B8E3-23D52EC9293A</title>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC개인_6_홈_1_default-" transform="translate(-534.000000, -396.000000)">
+            <g id="3_Main_Area" transform="translate(430.000000, 144.000000)">
+                <g id="swiper_pagination" transform="translate(48.000000, 252.000000)">
+                    <g id="btn/ico/next/default/h40" transform="translate(56.000000, 0.000000)">
+                        <circle id="Oval" stroke="#FFFFFF" opacity="0.5" cx="20" cy="20" r="19.5"></circle>
+                        <g id="btn/next/h40" transform="translate(8.000000, 8.000000)">
+                            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                            <g id="chevron-right-(3)" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(9.000000, 6.000000)" opacity="0.8" stroke="#FFFFFF" stroke-width="2">
+                                <polyline id="Path" transform="translate(3.000000, 6.000000) scale(-1, 1) translate(-3.000000, -6.000000) " points="0 12 6 6 0 0"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

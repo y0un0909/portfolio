@@ -1,47 +1,57 @@
 /* 공통 */
-html,body{
-  scrollTop:100px; 
+html,
+body {
+  scrollTop: 100px;
 }
-.box{
+
+.box {
   height: box;
 }
-#title{
+
+#title {
   /*! height: 100%; */
 }
-.box h2{
+
+.box h2 {
   text-align: center;
   font-size: 40px;
   line-height: 3;
   text-transform: uppercase;
   padding-top: 15px;
 }
-.box h2 span{
-  
+
+.box h2 span {
+
   color: #f11;
 }
-.eng{
+
+.eng {
   font-family: 'Cardo', serif;
   color: white;
 }
+
 /* 상단영역 */
-header{
- height: 100px;
- position: absolute;
- width: 100%;
- text-align: center;
- padding-top: 50px;
+header {
+  height: 100px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
 }
-.rot12{
+
+.rot12 {
   transform: rotate(12deg);
 }
-header>div{
-  
+
+header>div {
+
   display: flex;
   justify-content: flex-end;
   gap: 30px;
 }
-header h1{
-  
+
+header h1 {
+
   /*! float: left; */
   /*! border: 2px solid; */
   position: fixed;
@@ -49,10 +59,10 @@ header h1{
   padding-left: 30px;
   overflow: hidden;
   padding: 15px;
-  top: 15px;
-  
+  top: 30px;
 }
-header::before{
+
+header::before {
   content: "";
   width: 340px;
   height: 65px;
@@ -60,67 +70,82 @@ header::before{
   /*! background-color: #b4b4b4; */
   position: fixed;
   left: 0;
-  top:42px;
-  
+  top: 42px;
+
   border-radius: 0 20px 20px 0;
 }
-header h1 a{
+
+header h1 a {
   display: block;
   color: white;
   font-size: 42px;
 }
-header h1 a span{
+
+header h1 a span {
   display: inline-block;
   font-size: 25px;
   transition: all 1s;
-  animation-name:rot12;
-  animation-duration:1s;
-  animation-iteration-count:1;
-  animation-fill-mode: forwards ;
-  animation-timing-function:cubic-bezier(0,.88,.07,1.25);
+  animation-name: rot12;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, .88, .07, 1.25);
   opacity: 0;
   transform-origin: 100% 100%;
-  transform:translateY(100%); 
+  transform: translateY(100%);
 }
-@keyframes rot12{
-  0%{
-  transform: translate(-20%,-100%) scale(0.4);  
+
+@keyframes rot12 {
+  0% {
+    transform: translate(-20%, -100%) scale(0.4);
   }
-  50%{
-  transform:  translate(20%, 0%) scale(1);
+
+  50% {
+    transform: translate(20%, 0%) scale(1);
   }
-  100%{
-    transform:  translate(0%, 0%) scale(1);
+
+  100% {
+    transform: translate(0%, 0%) scale(1);
     opacity: 1;
   }
 }
-header h1 a span:nth-child(1){
+
+header h1 a span:nth-child(1) {
   animation-delay: 0.3;
 }
-header h1 a span:nth-child(2){
+
+header h1 a span:nth-child(2) {
   animation-delay: 0.6s;
 }
-header h1 a span:nth-child(3){
-  animation-delay: 0.9s; 
+
+header h1 a span:nth-child(3) {
+  animation-delay: 0.9s;
 }
-header h1 a span:nth-child(4){
-  animation-delay: 1.2s;  
+
+header h1 a span:nth-child(4) {
+  animation-delay: 1.2s;
 }
-header h1 a span:nth-child(5){
-  animation-delay: 1.5s;  
+
+header h1 a span:nth-child(5) {
+  animation-delay: 1.5s;
 }
-header h1 a span:nth-child(6){
-  animation-delay: 1.8s;  
+
+header h1 a span:nth-child(6) {
+  animation-delay: 1.8s;
 }
-header h1 a span:nth-child(7){
-  animation-delay: 2.1s;  
+
+header h1 a span:nth-child(7) {
+  animation-delay: 2.1s;
 }
-header h1 a span:nth-child(8){
-  animation-delay: 2.4s;  
+
+header h1 a span:nth-child(8) {
+  animation-delay: 2.4s;
 }
-header h1 a span:nth-child(9){
-  animation-delay: 2.7s;  
+
+header h1 a span:nth-child(9) {
+  animation-delay: 2.7s;
 }
+
 .slide {
   transition: all 1s;
   position: fixed;
@@ -131,72 +156,82 @@ header h1 a span:nth-child(9){
   text-align: left;
   z-index: 1;
 }
-.slide li{
-  display:block;
-  
+
+.slide li {
+  display: block;
+
 }
-.slide li a{
+
+.slide li a {
   transition: all 1s;
   transform-origin: 0 50%;
 }
 
-.current{
+.current {
   color: pink;
   transform: scale(1.5) !important;
- }
+}
 
-.slidingmenuBack{
+.slidingmenuBack {
   left: -120px;
   opacity: 0;
 }
-.slidingmenu{
-  
+
+.slidingmenu {
+
   left: 52px;
   opacity: 1;
 }
-.slidingmenu li{
+
+.slidingmenu li {
   display: block;
 }
-.slidingmenu li a{
+
+.slidingmenu li a {
   line-height: 2;
   display: block;
   font-size: 20px;
 }
 
-header ul{
+header ul {
   /*! border: 2px solid; */
   /*! display: inline-block; */
   /*! float: right; */
   /*! margin-right: 200px; */
   /*! width: 24%; */
 }
-header ul.menu{
-  
+
+header ul.menu {
+
   display: flex;
   gap: 50px;
 }
-header ul.menu li{
+
+header ul.menu li {
   /*! display: inline-block; */
 }
-header ul li a.eng{
-  text-transform:uppercase;
+
+header ul li a.eng {
+  text-transform: uppercase;
   font-size: 30px;
   position: relative;
 }
-header ul li a .ko{
+
+header ul li a .ko {
   position: absolute;
   top: -20px;
-  left:10%;
+  left: 10%;
   width: 100%;
   display: block;
   font-size: 12px;
   background-color: yellow;
   color: white;
   border-radius: 0 10px 0 10px;
-  
+
 }
-header span.lang{
-  
+
+header span.lang {
+
   /*! position: absolute; */
   /*! right: 0; */
   /*! padding-right: 30px; */
@@ -205,7 +240,8 @@ header span.lang{
   gap: 15px;
   margin-right: 35px;
 }
-header span.lang button{
+
+header span.lang button {
   padding: 3px 11px;
   font-size: 10px;
   text-transform: uppercase;
@@ -217,7 +253,7 @@ header span.lang button{
 }
 
 /*  타이틀  */
-#title{
+#title {
   /*! background-color: #ccc; */
   background-image: url(https://images.unsplash.com/photo-1671038003907-dcb7673fd8d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDExODF8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60);
   background-size: 100%;
@@ -230,72 +266,79 @@ header span.lang button{
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -169px;
 }
-#title hgroup{
+
+#title hgroup {
   max-width: 1200px;
   margin: 0 auto;
   transform: translateY(-20%);
 }
-#title hgroup h2{
+
+#title hgroup h2 {
   font-size: 40px;
-  line-height:1.6;
+  line-height: 1.6;
   animation-name: h2t;
   animation-duration: 2s;
   animation-iteration-count: 1;
-  animation-direction: reverse ;
+  animation-direction: reverse;
   color: white;
   /*! background-color: #cccccc94; */
 }
-@keyframes h2t{
-  100%{
+
+@keyframes h2t {
+  100% {
     transform: translateY(-100%);
     opacity: 0;
   }
 }
-#title hgroup h2 span{
-  
+
+#title hgroup h2 span {
+
   color: #0ff;
 }
-#title hgroup h3{
+
+#title hgroup h3 {
   font-size: 30px;
   color: #fffb00;
-   animation-name: h3t;
+  animation-name: h3t;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-iteration-count: 1;
-  animation-direction: reverse ;
-  animation-fill-mode:backwards ;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
   /*! background-color: #cccccc91; */
   /*! width: 574px; */
   display: flex;
   justify-content: space-evenly;
 }
-@keyframes h3t{
-  100%{
+
+@keyframes h3t {
+  100% {
     transform: translateY(20%);
     opacity: 0;
   }
 }
 
 
-#profile{
+#profile {
   background: gray;
   height: 100%;
 }
 
-#profile .profilein{
+#profile .profilein {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   margin-top: 100px;
 }
-#profile .profilein .left{
+
+#profile .profilein .left {
   display: inline-block;
   width: 400px;
   /*! border: #fff 10px solid; */
 }
-#profile .profilein .right{
+
+#profile .profilein .right {
   display: inline-block;
   vertical-align: top;
   background: #ff8b8b;
@@ -304,49 +347,53 @@ header span.lang button{
   border: #fff 10px solid;
   width: 15%;
 }
-#profile .profilein .right h3{
+
+#profile .profilein .right h3 {
   line-height: 3;
   color: #fff;
   font-size: 20px;
 }
-#profile .profilein .hcj{
-  
+
+#profile .profilein .hcj {
+
   position: absolute;
   top: 73%;
   left: 61%;
   width: 20%;
   background-color: white;
 }
-#profile .profilein .right ul{
-  
-}
-#profile .profilein .right ul li{
+
+#profile .profilein .right ul {}
+
+#profile .profilein .right ul li {
   line-height: 3;
   color: #fff;
 }
-#profile .profilein .right ul li span{
-  
-}
+
+#profile .profilein .right ul li span {}
+
 body[data-aos-duration="400"] [data-aos] {
-    transition-duration: 2.4s !important;
+  transition-duration: 2.4s !important;
 }
 
 
-#portfolio{
+#portfolio {
   background-color: #000;
   background-image: url(https://images.unsplash.com/photo-1525340941843-5ab5dd974e0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);
   background-repeat: no-repeat;
   background-position-x: 50%;
 }
-#portfolio::before{
-  content:"";
+
+#portfolio::before {
+  content: "";
   width: 600px;
   height: 800px;
   display: block;
   background-color: #d4003b;
   transform: skewX(-45deg) translateX(-300px);
 }
-#portfolio .portfolioin{
+
+#portfolio .portfolioin {
   max-width: 1400px;
   margin: 0 auto;
   margin-top: 80px;
@@ -355,11 +402,13 @@ body[data-aos-duration="400"] [data-aos] {
   /*! width: 90%; */
   padding-bottom: 100px;
 }
-.slick-slide img{
+
+.slick-slide img {
   width: 100%;
 }
-#portfolio .portfolioin .detail{
-  background-color: rgba(0,0,0,0.4);
+
+#portfolio .portfolioin .detail {
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -368,70 +417,85 @@ body[data-aos-duration="400"] [data-aos] {
   opacity: 0;
   transition: all 0.5s;
 }
-.slick-current:hover .detail{
+
+.slick-current:hover .detail {
   opacity: 1 !important;
 }
-#portfolio .portfolioin .detail h3{
+
+#portfolio .portfolioin .detail h3 {
   text-align: center;
   line-height: 3;
-  margin-top:65px;
+  margin-top: 65px;
   color: white;
 }
-#portfolio .portfolioin .detail p{
- text-align: center; 
- color: skyblue;
- line-height: 3;
+
+#portfolio .portfolioin .detail p {
+  text-align: center;
+  color: skyblue;
+  line-height: 3;
 }
-#portfolio .portfolioin .detail a{
+
+#portfolio .portfolioin .detail a {
   display: block;
   width: 130px;
-  margin:0 auto;
+  margin: 0 auto;
   text-align: center;
 }
-.slick-prev{
-  left: 25px !important;
+
+.slick-prev {
+  left: calc(50% - 50px - 40px);
   z-index: 3;
 }
-.slick-next{
-  right: 25px !important;
+
+.slick-next {
+  right: calc(50% - 50px - 40px); !important;
   z-index: 3;
 }
-.slick-dots{
+
+.slick-dots {
   bottom: -70px !important;
 }
-.slick-list{
+
+.slick-list {
   overflow: initial !important;
 }
-.slick-slide{
+
+.slick-slide {
   transition: all 0.5s;
   opacity: 0.5;
 }
-.slick-current{
+
+.slick-current {
   transform: scale(1.2);
   opacity: 1;
   position: relative;
   z-index: 2;
 }
+
 /* 웹디자인작품*/
-#portfolio .design{
+#portfolio .design {
   text-align: center;
   display: none;
 }
-#portfolio .design h3{
+
+#portfolio .design h3 {
   margin: 200px 0 50px;
   font-size: 50px;
   font-family: 'Cardo', serif;
   color: green;
 }
-#portfolio .design ul{
+
+#portfolio .design ul {
   display: inline-block;
   vertical-align: top;
 }
-#portfolio .design ul li{
+
+#portfolio .design ul li {
   float: left;
   margin: 25px;
 }
-#portfolio .design ul img{
+
+#portfolio .design ul img {
   padding: 30px 0;
   width: 400px;
   height: 400px;
@@ -439,17 +503,21 @@ body[data-aos-duration="400"] [data-aos] {
   position: relative;
   border-radius: 30%;
 }
-#portfolio .design ul img:hover{
+
+#portfolio .design ul img:hover {
   transform: scale(1.2);
 }
-#portfolio .design ul a{
+
+#portfolio .design ul a {
   position: relative;
   display: block;
 }
-#portfolio .design ul a:hover img{
+
+#portfolio .design ul a:hover img {
   transform: scale(1.2);
 }
-#portfolio .design ul a:hover::before{
+
+#portfolio .design ul a:hover::before {
   content: "상세 이미지 보기";
   position: absolute;
   left: calc(50% - 85px);
@@ -457,65 +525,70 @@ body[data-aos-duration="400"] [data-aos] {
   z-index: 3;
   width: 100%;
   text-align: center;
-  background-color: rgba(250,250,250,0.6);
+  background-color: rgba(250, 250, 250, 0.6);
   width: 150px;
   padding: 30px 0;
-  
+
   animation-name: textshow;
   animation-duration: 0.5s;
   animation-direction: reverse;
   animation-iteration-count: 1;
 }
-@keyframes textshow{
-  100%{
+
+@keyframes textshow {
+  100% {
     opacity: 0;
   }
 }
-#portfolio .design ul li:nth-child(4){
-}
-#portfolio .design ul li:nth-child(5){
+
+#portfolio .design ul li:nth-child(4) {}
+
+#portfolio .design ul li:nth-child(5) {
   position: absolute;
 }
-#portfolio .design ul li:nth-child(6){
-  
-}
 
-#contact{
+#portfolio .design ul li:nth-child(6) {}
+
+#contact {
   background-color: gray;
   height: 760px;
   background-image: url(https://images.unsplash.com/photo-1631477076114-9123f721b9dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
   background-repeat: no-repeat;
   background-size: cover;
 }
-#contact .box{
-  
-}
-#contact .down{
+
+#contact .box {}
+
+#contact .down {
   text-align: center;
   margin-top: 7%;
 }
-#contact .down h3{
-  
+
+#contact .down h3 {
+
   margin-bottom: 30px;
   font-size: 30px;
   color: #04a3c8;
 }
-#contact .down li{
+
+#contact .down li {
   line-height: 2;
   margin-bottom: 9px;
   color: white;
   font-size: 20px;
 }
-#contact .down .colors{
+
+#contact .down .colors {
   color: gray;
 }
-#contact .down li span{
-  
-}
-footer{
+
+#contact .down li span {}
+
+footer {
   background-color: #333;
 }
-.home{
+
+.home {
   position: fixed;
   right: 1%;
   bottom: 5%;
@@ -529,29 +602,27 @@ footer{
   border: none;
   cursor: pointer;
 }
-.home::before{
-  content:"<";
+
+.home::before {
+  content: "<";
   transform: rotate(90deg) scaleY(2.5);
   position: absolute;
   top: -35px;
   left: 24px;
-  font-size:13px;
-  animation-name:top;
+  font-size: 13px;
+  animation-name: top;
   animation-iteration-count: infinite;
-  animation-duration:2s;
+  animation-duration: 2s;
   animation-direction: alternate;
 }
-@keyframes top{
+
+@keyframes top {
+
   /*50%{
     top:-50px;
   }*/
-  100%{
+  100% {
     transform: rotate(90deg) scaleY(2.5) translateX(-20px);
-    color:#fff;
+    color: #fff;
   }
 }
-
-
-
-
-

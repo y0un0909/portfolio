@@ -46,14 +46,12 @@
 
     #contact .down h3 {
 
-        font-size: 30px;
+        font-size: 50px;
     }
-    #contact .down li{
-        
-    }
+
     #contact .down li span {
 
-        font-size: 30px;
+        font-size: 40px;
         line-height: 1.5;
     }
 
@@ -75,16 +73,17 @@
     }
 
     header h1 {
-        top: -15px;
+
+        top: 0px;
         left: 0;
         position: absolute;
     }
 
-    header ul.menu {margin-top: 2%;}
+    header ul.menu {}
 
     header ul.menu li {}
 
-    header ul li a.eng {
+    header ul li a {
 
         font-size: 30px;
     }
@@ -92,7 +91,7 @@
     header span.lang {
 
         height: 30px;
-        margin-top: 2%;
+        /*! margin-top: 2%; */
     }
 
     header span.lang button {}
@@ -102,18 +101,14 @@
         background-size: cover;
         height: 750px;
         background-position-x: 50%;
-        background-position-y: 50%;
     }
-    #title hgroup{
-        
-    transform: translateY(20%);
-    }
+
     #title hgroup h2 {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     #title hgroup h3 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     #profile .profilein {}
@@ -153,10 +148,11 @@
     #contact {
 
         background-position-x: -300px;
-        height: 79%;
+        height: 760px;
     }
 
     #contact .down {
         margin-top: 15%;
+        height: 100%;
     }
 }
